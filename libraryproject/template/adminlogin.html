@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In</title>
+</head>
+<body align="center" style="background-color:pink;">
+    <form action="{% url 'admins1' %}" method="POST">
+        {% csrf_token %}
+        <h1><p>Admin-Login</p></h1>
+        <label>E-Mail or User Name</label><br>
+        <input type="text" name="user">
+        <br><br>
+        <label>Password</label><br>
+        <input type="text" name="pass">
+        <br><br>
+        <p>Click on Log-In Button</p>
+        <input type="submit" value="Log-In">
+        {% csrf_token %}
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center" style="background-color:pink;">
+
+        <form action="{% url 'updatebook13' %}" method="POST">
+            {% csrf_token %}
+                <h1><p>update book</p></h1><br>
+                
+                <label>BookName</label><br>
+                <input type="text" name="bname">
+                <br><br>
+                <label>WritertName</label><br>
+                <input type="text"name="wn">
+                <br><br>
+                <label>Edition</label><br>
+                <input type="text" name="edition">
+                <br><br>
+                <label>price</label><br>
+                <input type="text" name="price">
+                <br><br>
+                <label>catagory</label><br>
+                <input type="text" name="cate">
+                <br><br>
+                <label>Publisher</label><br>
+                <input type="text" name="pub">
+                <br>
+                <input type="checkbox">
+                <label>I Have Agree terms and condtions</label><br><br>
+                <p>Click on add-book Button</p>
+                <input type="submit" value="add-book">
+            {% csrf_token %}
+        </form>
+</body>
+</html>
